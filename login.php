@@ -9,7 +9,7 @@ $sql = "SELECT * FROM usuarios WHERE email='$email' AND senha='$senha'";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) > 0){
-    $_SESSION['email'] = $email; // <-- MUDEI AQUI
+    $_SESSION['email'] = $email; 
     header("Location: index2.php");
     exit;
 } else {
